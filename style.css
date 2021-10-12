@@ -1,0 +1,192 @@
+html {
+  background-color: #295f8e;
+  color: #000;
+  font-family: arial;
+}
+
+body {
+  background-color: #ccbf84;
+  align-content: center;
+  max-width: 90%;
+}
+
+.box {
+  border: 1px solid #fff;
+}
+
+#base {
+  display: flex;
+  flex-direction: column;
+  /* max-width: 80%;
+  align-items: center; */
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+}
+
+#leftHeader {
+  flex: .05;
+  min-width: 83px;
+  max-width: 83px;
+  min-height: 88px;
+  max-height: 83px;
+}
+
+#centerHeader {
+  flex: 1;
+  background-color: #000;
+}
+
+#headerTop {
+  min-height: 52px;
+  max-height: 52px;
+
+  background-image: url("./images/Bubbas_02\ cropped.jpg");
+  background-repeat: repeat-x;
+  /* scale to fit whole number of images */
+  background-repeat: round;
+}
+
+#headerBottom {
+  align-content: center;
+  border-bottom-color: #800;
+  border: 4px;
+}
+
+@font-face {
+  font-family: ITCKristenNormal;
+  src: url(ITCKRIST.TTF);
+}
+
+#pageTitle {
+  color: #fff;
+  font-family: ITCKristenNormal;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+}
+
+.redText {
+  font-family: ITCKristenNormal;
+  color: #800;
+  font-size: larger;
+  font-weight: bold;
+}
+
+#rightHeader {
+  min-width: 82px;
+  max-width: 82px;
+  min-height: 88px;
+  max-height: 83px;
+}
+
+#middle {
+  display: flex;
+  flex-direction: row;
+}
+
+#hook {
+  flex: .5;
+  /* TODO centering not working */
+  align-items: center;
+}
+
+#fishGroup {
+  display: flex;
+  flex-direction: column;
+  flex: content;
+}
+
+#motto {
+  flex: .5;
+  text-align: center;
+  justify-content: center;
+  padding: 0;
+}
+
+#specialGroup {
+  display: flex;
+  flex-direction: row;
+  flex: 3;
+}
+
+#fish {
+  align-content: center;
+  flex: 3;
+  align-items: center;
+}
+
+#specialsBox {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#specialsTitle {
+  text-align: center;
+  flex: 1;
+}
+
+#specialsMenu {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+  font-weight: bold;
+}
+
+#menuItems {
+  flex: 1;
+}
+
+#menuPrices {
+  flex: .75;
+}
+
+#description {
+  display: flex;
+  flex-direction: column;
+}
+
+#aboutWord {
+  text-align: center;
+}
+
+#descGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+#descBox {
+  padding: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  max-width: 75%;
+}
+
+#desc1 {
+  flex: .75;
+  text-align: center;
+}
+
+#desc2 {
+  flex: .75;
+  text-align: center;
+}
+
+#desc3 {
+  flex: .75;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {}
+
+
+@media screen and (max-width: 550px) {
+  #description {
+    flex-direction: row;
+  }
+}
