@@ -7,25 +7,46 @@ html {
 body {
   background-color: #ccbf84;
   align-content: center;
-  max-width: 90%;
+  max-width: 70%;
+  align-items: center;
+  align-self: center;
+  margin: auto;
 }
 
-.box {
-  border: 1px solid #fff;
+/* .box {border: 1px solid #fff;
+} */
+
+@font-face {
+  font-family: ITCKristenNormal;
+  src: url(ITCKRIST.TTF);
+}
+
+.redText {
+  font-family: ITCKristenNormal;
+  color: #800;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.headerImage {
+  background-color: #000;
 }
 
 #base {
   display: flex;
   flex-direction: column;
-  /* max-width: 80%;
-  align-items: center; */
+  /* max-width: 80%;*/
+  align-content: center;
 }
+
 
 #header {
   display: flex;
   flex-direction: row;
+  background-color: #000;
 }
 
+/* header details */
 #leftHeader {
   flex: .05;
   min-width: 83px;
@@ -55,24 +76,10 @@ body {
   border: 4px;
 }
 
-@font-face {
-  font-family: ITCKristenNormal;
-  src: url(ITCKRIST.TTF);
-}
-
 #pageTitle {
   color: #fff;
-  font-family: ITCKristenNormal;
-  font-weight: bold;
   text-align: center;
   padding: 0;
-}
-
-.redText {
-  font-family: ITCKristenNormal;
-  color: #800;
-  font-size: larger;
-  font-weight: bold;
 }
 
 #rightHeader {
@@ -82,47 +89,70 @@ body {
   max-height: 83px;
 }
 
+/* center of page */
 #middle {
   display: flex;
   flex-direction: row;
 }
 
 #hook {
-  flex: .5;
-  /* TODO centering not working */
-  align-items: center;
+  flex: 1;
+  /* align-items: center; */
+  align-self: center;
+  /* align-content: center; */
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
+/* center group */
 #fishGroup {
+  flex: 2;
   display: flex;
   flex-direction: column;
-  flex: content;
+  /* flex: content; */
 }
 
 #motto {
   flex: .5;
   text-align: center;
-  justify-content: center;
-  padding: 0;
+  /* justify doesnt work */
+  /* justify-items: center; */
+  padding-top: 15px;
 }
 
+/* center group */
 #specialGroup {
   display: flex;
   flex-direction: row;
-  flex: 3;
+  flex: 1;
+  margin-right: 20px;
+
+}
+
+/* fish picture */
+#fishBox {
+  flex: 1;
+  align-content: center;
+  align-items: center;
+  align-self: center;
 }
 
 #fish {
   align-content: center;
-  flex: 3;
   align-items: center;
+  align-self: center;
+  /* margin-left: 115px; */
 }
 
+
+/* specials */
 #specialsBox {
   /* text-align: center; */
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: .5;
+  border: 2px solid #800;
+  border-radius: 10px;
 }
 
 #specialsTitle {
@@ -165,28 +195,60 @@ body {
   padding-left: 4px;
   padding-right: 4px;
   max-width: 75%;
+  min-width: 75%;
 }
 
 #desc1 {
   flex: .75;
   text-align: center;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 #desc2 {
   flex: .75;
   text-align: center;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 #desc3 {
   flex: .75;
   text-align: center;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
-@media screen and (max-width: 800px) {}
+@media screen and (max-width: 800px) {
+  body {
+    max-width: 90%;
+  }
+
+  #hook {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #specialsBox {
+    flex: 1;
+  }
+
+  #motto {
+    word-wrap: normal;
+  }
+
+  #fishBox {
+    display: none;
+  }
+
+  #descGroup {
+    flex-direction: column;
+  }
+}
 
 
 @media screen and (max-width: 550px) {
-  #description {
-    flex-direction: row;
+  #descGroup {
+    flex-direction: column;
   }
 }
